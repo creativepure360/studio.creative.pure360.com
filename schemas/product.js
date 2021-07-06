@@ -38,6 +38,12 @@ export default {
       ],
     },
     {
+      name: "examples",
+      title: "Examples",
+      type: "array",
+      of: [{ type: "image" }],
+    }, 
+    {
       name: "category",
       title: "Category",
       type: "array",
