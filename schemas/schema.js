@@ -3,8 +3,9 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import category from "./category";
 import product from "./product";
 import productType from "./productType";
+import tool from "./tool";
 
 export default createSchema({
   name: "creative",
-  types: schemaTypes.concat([category, product, productType]),
+  types: schemaTypes.concat([category, product, productType, tool]),
 });
