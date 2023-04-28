@@ -15,12 +15,6 @@ export const category = defineType({
       validation: required,
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "array",
-      of: [{ type: "block" }],
-    }),
-    defineField({
       name: "exerpt",
       title: "Excerpt",
       type: "array",
