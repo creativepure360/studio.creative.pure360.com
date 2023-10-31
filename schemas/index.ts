@@ -1,6 +1,7 @@
-import {product} from './product'
-import {category} from './category'
-import {post} from './post'
 import {page} from './page'
+import {product} from './product'
+import {post} from './post'
+import {platform} from './platform'
+import {tool} from './tool'
 
-export const schemaTypes = [product, category, post, page]
+export const schemaTypes = [page, product, post, platform, tool]

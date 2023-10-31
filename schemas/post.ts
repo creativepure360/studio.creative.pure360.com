@@ -9,6 +9,26 @@ export const post = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: "platform",
+      title: "Platform",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "platform",
+          },
+        },
+      ],
+      validation: required,
+    }),
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: required,
+    }),
+    defineField({
       name: 'date',
       title: 'Date',
       type: 'date',
@@ -21,22 +41,10 @@ export const post = defineType({
       validation: required,
     }),
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: required,
-    }),
-    defineField({
       name: 'copy',
       title: 'Copy',
       type: 'array',
       of: [{type: 'block'}, {type: 'image'}],
-    }),
-    defineField({
-      name: 'exerpt',
-      title: 'Excerpt',
-      type: 'array',
-      of: [{type: 'block'}],
     }),
     defineField({
       name: 'image',
@@ -49,20 +57,6 @@ export const post = defineType({
           type: 'string',
         },
       ],
-    }),
-    defineField({
-      name: 'category',
-      title: 'Category',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'category',
-          },
-        },
-      ],
-      validation: required,
     }),
     defineField({
       name: 'slug',

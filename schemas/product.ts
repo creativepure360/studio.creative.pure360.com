@@ -45,20 +45,6 @@ export const product = defineType({
       of: [{ type: "image" }],
     }), 
     defineField({
-      name: "category",
-      title: "Category",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: {
-            type: "category",
-          },
-        },
-      ],
-      validation: required,
-    }),
-    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
